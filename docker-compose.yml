@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  noco-db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=admin@123
+    volumes:
+      - ./database/pgdata:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+ 
